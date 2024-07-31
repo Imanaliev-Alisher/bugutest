@@ -18,4 +18,4 @@ COPY .env /app/.env
 ENV DJANGO_SETTINGS_MODULE=bugutest.settings
 ENV PYTHONUNBUFFERED 1
 
-CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "bugutest.wsgi:application"]
