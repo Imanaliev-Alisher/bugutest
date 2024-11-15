@@ -2,13 +2,13 @@ version: '3.8'
 
 services:
   db:
-    image: postgres:13
+    image: postgres
     volumes:
       - postgres_data:/var/lib/postgresql/data
     environment:
       POSTGRES_DB: bugutest
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: kflZ5X4xiL1Wwdg
+      POSTGRES_PASSWORD: Alisher13@
 
   web:
     build: .
@@ -24,7 +24,7 @@ services:
       DJANGO_SETTINGS_MODULE: bugutest.settings
       POSTGRES_DB: bugutest
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: kflZ5X4xiL1Wwdg
+      POSTGRES_PASSWORD: Alisher13@
       POSTGRES_HOST: db
       POSTGRES_PORT: 5432
 
